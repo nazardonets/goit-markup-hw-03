@@ -52,7 +52,7 @@ body {
 	overflow: hidden;
 }
 
-.--alternate {
+.--alternate-color {
 	background-color: var(--color-section-alternate-bg);
 }
 
@@ -326,14 +326,13 @@ body {
 	justify-content: space-between;
 }
 
+.portfolio-projects__list-item {
+	max-width: 370px;
+}
+
 .portfolio-projects__list-item__link {
 	border: 1px solid #eeeeee;
 	box-sizing: border-box;
-}
-
-.portfolio-projects__list-item {
-	max-width: 370px;
-	max-height: 402px;
 }
 
 .portfolio-projects__list-item:not(:nth-last-child(-n + 3)) {
@@ -344,7 +343,7 @@ body {
 	margin: 20px 24px 0 24px;
 	font-weight: 700;
 	font-size: 18px;
-	line-height: 1;
+	line-height: 2;
 	letter-spacing: 0.06em;
 	color: var(--color-dark-grey);
 }
