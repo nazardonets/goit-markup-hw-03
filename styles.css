@@ -4,8 +4,10 @@
 	--font-main: 'Roboto', 'Helvetica', sans-serif;
 	--font-logo: 'Raleway', 'Oleo Script', serif;
 	--color-brand: #2196f3;
+	--color-brand-hover: #188ce8;
 	--color-dark-grey: #212121;
 	--color-light-grey: #757575;
+	--color-light-grey-2: #eeeeee;
 	--color-white: #ffffff;
 	--color-dark-bg: #2f303a;
 	--color-section-alternate-bg: #f5f4fa;
@@ -66,10 +68,10 @@ body {
 .header,
 .header .logo,
 .header .flex-wrapper,
-.header__nav,
-.header__nav__list,
-.header__nav__list-item,
-.header__nav__list-item__link,
+.header-nav,
+.header-nav__list,
+.header-nav__list-item,
+.header-nav__list-item__link,
 .header-contacts__list,
 .header-contacts__list-item,
 .header-contacts__list-item__link,
@@ -83,7 +85,7 @@ body {
 	align-items: center;
 }
 
-.header__nav__list,
+.header-nav__list,
 .header-contacts__list,
 .benefits__list,
 .what-we-do__list,
@@ -97,7 +99,7 @@ body {
 }
 
 .logo,
-.header__nav__list-item__link,
+.header-nav__list-item__link,
 .header-contacts__list-item__link,
 .portfolio-projects__list-item__link,
 .footer-contacts__list-item__link {
@@ -117,9 +119,6 @@ body {
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.19;
-}
-
-.logo--blue {
 	color: var(--color-brand);
 }
 
@@ -131,7 +130,7 @@ body {
 	color: var(--color-white);
 }
 
-.header__nav__list-item__link {
+.header-nav__list-item__link {
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.14;
@@ -144,13 +143,19 @@ body {
 	color: var(--color-light-grey);
 }
 
-.header__nav__list-item__link:hover,
+.header-contacts__list-item__link {
+	font-weight: 500;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+
+.header-nav__list-item__link:hover,
 .header-contacts__list-item__link:hover,
 .footer-contacts__list-item__link:hover {
 	color: var(--color-brand);
 }
 
-.header__nav__list-item:not(:last-child),
+.header-nav__list-item:not(:last-child),
 .header-contacts__list-item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -197,7 +202,7 @@ body {
 }
 
 .hero__button:hover {
-	background-color: #188ce8;
+	background-color: var(--color-brand-hover);
 }
 
 /* BENEFITS */
@@ -228,8 +233,6 @@ body {
 
 .benefits__list-item__description {
 	margin: 0;
-	font-weight: 400;
-	font-size: 14px;
 	color: var(--color-light-grey);
 }
 
@@ -253,8 +256,7 @@ body {
 }
 
 .what-we-do__list-item__image,
-.our-team__list-item__image,
-.portfolio-projects__list-item__link {
+.our-team__list-item__image {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -281,7 +283,6 @@ body {
 
 .our-team__list-item__description {
 	margin: 10px 0 0 0;
-	font-weight: 400;
 	font-size: 16px;
 	line-height: 1.18;
 	color: var(--color-light-grey);
@@ -330,9 +331,23 @@ body {
 	max-width: 370px;
 }
 
-.portfolio-projects__list-item__link {
-	border: 1px solid #eeeeee;
+.portfolio-projects__list-item,
+.portfolio-projects__list-item__link,
+.portfolio-projects__list-item__content-box {
 	box-sizing: border-box;
+}
+
+.portfolio-projects__list-item__link-img {
+	display: block;
+	width: 100%;
+}
+
+.portfolio-projects__list-item__content-box {
+	padding: 20px 23px;
+	border-right: 1px solid var(--color-light-grey-2);
+	border-bottom: 1px solid var(--color-light-grey-2);
+	border-left: 1px solid var(--color-light-grey-2);
+	height: fit-content;
 }
 
 .portfolio-projects__list-item:not(:nth-last-child(-n + 3)) {
@@ -340,7 +355,7 @@ body {
 }
 
 .portfolio-projects__list-item__link-title {
-	margin: 20px 24px 0 24px;
+	margin: 0;
 	font-weight: 700;
 	font-size: 18px;
 	line-height: 2;
@@ -349,8 +364,7 @@ body {
 }
 
 .portfolio-projects__list-item__link-description {
-	margin: 4px 24px 20px 24px;
-	font-weight: 400;
+	margin: 0;
 	font-size: 16px;
 	line-height: 1.88;
 	letter-spacing: 0.03em;
@@ -374,7 +388,10 @@ body {
 	color: var(--color-white);
 }
 
-.footer__address,
+.footer-contacts__list-item:first-child .footer-contacts__list-item__link {
+	color: var(--color-section-alternate-bg);
+}
+
 .footer-contacts__list-item:not(:last-child) {
 	margin-bottom: 9px;
 }
