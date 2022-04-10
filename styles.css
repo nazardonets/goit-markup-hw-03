@@ -1,8 +1,8 @@
 /* COMMON */
 
 :root {
-	--font-main: 'Roboto', 'Helvetica', sans-serif;
-	--font-logo: 'Raleway', 'Oleo Script', serif;
+	--font-main: 'Roboto', sans-serif;
+	--font-logo: 'Raleway', serif;
 	--color-brand: #2196f3;
 	--color-brand-hover: #188ce8;
 	--color-dark-grey: #212121;
@@ -343,11 +343,10 @@ body {
 }
 
 .portfolio-projects__list-item__content-box {
-	padding: 20px 23px;
+	padding: 20px 24px;
 	border-right: 1px solid var(--color-light-grey-2);
 	border-bottom: 1px solid var(--color-light-grey-2);
 	border-left: 1px solid var(--color-light-grey-2);
-	height: fit-content;
 }
 
 .portfolio-projects__list-item:not(:nth-last-child(-n + 3)) {
