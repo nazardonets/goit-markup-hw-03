@@ -167,7 +167,8 @@ body {
 /* HERO */
 
 .section-hero {
-	height: 600px;
+	padding-top: 200px;
+	padding-bottom: 200px;
 	background-color: var(--color-dark-bg);
 }
 
